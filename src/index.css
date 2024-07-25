@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --text-stroke-color: #656565;
+}
+
+
+
+@font-face {
+  font-family: "ibmplexmono-bold";
+  src: url(./assets/fonts/IBMPlexMono/IBMPlexMono-Bold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "ibmplexmono-regular";
+  src: url(./assets/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "jap";
+  src: url(./assets/fonts/NotoSansJP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+.jap {
+  font-family: "jap";
+}
+
+.ibm-normal {
+  font-family: "ibmplexmono-regular";
+  font-weight: 400;
+}
+
+.ibm-bold {
+  font-family: "ibmplexmono-bold";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "mavenpro-regular";
+  font-weight: 400;
+  src: url(./assets/fonts/maven-pro/MavenPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-bold";
+  font-weight: 600;
+  src: url(./assets/fonts/maven-pro/MavenPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-black";
+  font-weight: 900;
+  src: url(./assets/fonts/maven-pro/MavenPro-Black.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-medium";
+  font-weight: 500;
+  src: url(./assets/fonts/maven-pro/MavenPro-Medium.ttf);
+}
+
+@font-face {
+  font-family: "inder";
+  font-weight: 400;
+  src: url(./assets/fonts/Inder/Inder-Regular.ttf);
+}
+
+.tooltip {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-font {
+  font-family: "mavenpro-medium";
+}
+
+.maven {
+  font-family: "mavenpro-regular";
+}
+
+.text-shadow-stroke {
+    -webkit-text-stroke: 2px var(--text-stroke-color);
+}
+
+.divscroller {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: block;
+}
+
+.divscroller::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 20px;
+  width: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  scroll-behavior: smooth;
+  background-color: #2a2a2a;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006837;
+  border-radius: 20px;
+}
+
+.scrollbarnone {
+  scrollbar-width: 0;
+}
+
+.scrollbarnone::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+/* styles.css or your main CSS file */
+.swiper-slide-prev,
+.swiper-slide-next {
+  transform: scale(0.8); /* Scale down the side slides */
+  opacity: 0.6; /* Reduce opacity for side slides */
+}
+
+.swiper-slide-active .swiper-video {
+  transform: scale(1); /* Ensure the active slide's video is not scaled */
+  opacity: 1; /* Ensure the active slide's video has full opacity */
+}
+
+/* Hide the text initially and set up transition */
+.update-item {
+  position: relative;
+}
+
+.update-details {
+  position: absolute;
+  right: 20%;
+  bottom: 30%;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: cubic-bezier(0.19, 1, 0.22, 1) 0.8s; */
+}
+
+.update-item:hover .update-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bento-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bento-btn span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0%;
+  bottom: -100%;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.bento-btn:hover span::after {
+  bottom: 0;
+}
+
+.bento-btn:hover span {
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}
+
+
+
+#animation-canvas {
+  position: relative;
+  height: 100vh; /* Extra height for scrolling */
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+#animation-canvas canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+
